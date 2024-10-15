@@ -1,2 +1,8 @@
 # paleoELA
-Scripts associated with the manuscript "Congruent paleogenetic and monitoring time series document the effects of eutrophication and climate on algal communities in experimental lakes"
+Scripts associated with the manuscript
+
+---
+
+Garner RE, Taranu ZE, Higgins SN, Paterson MJ, Gregory-Eaves I, Walsh DA. Eutrophication and warming drive algal community shifts in synchronized time series of experimental lakes.
+
+ ---
