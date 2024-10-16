@@ -1,0 +1,15 @@
+# 18S amplicon workflow
+
+# 1.a Download raw fastq.gz files
+# 1.b Check md5 sums
+md5sum -c *.md5
+
+# 2. Change raw fastq file names
+R script rename_fastq
+
+# 3. Create list of samples
+R script create_sample_list
+
+# 4. Run Cutadapt
+
+# 5. Run DADA2
