@@ -1,0 +1,8 @@
+# Align ASVs to Silva reference database in SINA v. 1.7.2
+# sina -i ASVS.fasta -r REFERENCE.arb -o OUTPUT.fasta --log-file LOGFILE.log
+
+conda activate sina
+sina -i ~/Dropbox/projects/ela18s/output/fasta/ela18s_microeuks.fasta -r ~/Documents/sina/SILVA_138.1_SSURef_NR99_12_06_20_opt.arb -o ela18s_microeuks_sina.fasta --log-file ela18s_microeuks_sina.log
+
+# Build tree with FastTree
+FastTree -nt -gtr ela18s_microeuks_sina.fasta > ela18s_microeuks_gtr.tree
