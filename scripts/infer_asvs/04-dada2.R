@@ -1,11 +1,8 @@
 # Run DADA2 pipeline on Cutadapt-trimmed reads
-# For ELA full-core sediments and 2018 GF/C filters 18S rRNA gene amplicon sequencing data
 
+# Load libraries
 library(dada2)
 packageVersion("dada2")
-
-setwd("~/projects/ela18s/")
-
 
 # Identify Cutadapt-trimmed samples and read files
 (samples <- scan("samples", what = "character"))
@@ -57,12 +54,8 @@ getN <- function(x) sum(getUniques(x))
 summary_tab <- data.frame(row.names = samples, dada2_input = filtered_out[,1], filtered = filtered_out[,2], dada_f = sapply(dada_forward, getN), dada_r = sapply(dada_reverse, getN), merged = sapply(merged_amplicons, getN), nonchim = rowSums(seqtab.nochim), final_perc_reads_retained = round(rowSums(seqtab.nochim)/filtered_out[,1]*100, 1))
 write.table(summary_tab, "ela18s_readtracking.tsv", quote = FALSE, sep = "\t", col.names = NA)
 
-# Assign taxonomy against PR2 v. 4.12.0
-# taxonomy <- assignTaxonomy(seqtab.nochim, "~/projects/lp2017_amplicons/ref_dbs/pr2_version_4.12.0_18S_dada2.fasta.gz", taxLevels = c("kingdom","supergroup","division","class","order","family","genus","species"), multithread = TRUE)
-# save(taxonomy, file = "ela18s_taxonomy_pr2v412.rda")
-
 # Assign taxonomy against PR2 v. 5.0.0
-taxonomy <- assignTaxonomy(seqtab.nochim, "~/Desktop/ref_dbs/dada2_taxonomy/pr2_version_5.0.0_SSU_dada2.fasta.gz", taxLevels = c("domain", "supergroup", "division", "subdivision", "class", "order", "family", "genus", "species"), tryRC = TRUE, multithread = TRUE)
+taxonomy <- assignTaxonomy(seqtab.nochim, "pr2_version_5.0.0_SSU_dada2.fasta.gz", taxLevels = c("domain", "supergroup", "division", "subdivision", "class", "order", "family", "genus", "species"), tryRC = TRUE, multithread = TRUE)
 save(taxonomy, file = "ela18s_taxonomy_pr2v5_tryrc.rda")
 
 # Assign ASV codes to sequences
