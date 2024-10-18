@@ -10,11 +10,6 @@ names(palette_stratum) <- c("Epilimnion", "Metalimnion", "Hypolimnion", "Profund
 palette_stratum_shape <- c(17, 15)
 names(palette_stratum_shape) <- c("Epilimnion", "Metalimnion")
 
-# palette_manipulation <- c("#F3FFBD", "#70C1B3", "#B2DBBF", "#247BA0",
-#                           "#91CB3E", "#EEE82C", "#b9c4cb", "#C45445")
-# names(palette_manipulation) <- c("P only", "13N:P", "5N:P", "Fish",
-#                                  "C+N+P", "C+N", "Metals", "Drawdown")
-
 palette_manipulation <- c("#E2F0D9", "#A9D18E", "#C5E0B4", "#F4F9F0",
                           "#A9D18E", "#A9D18E", "#b9c4cb", "#5CD3FF")
 names(palette_manipulation) <- c("P only", "13N:P", "5N:P", "Fish",
@@ -48,26 +43,6 @@ palette_supergroup <- c("#75DAFF", "#FF2D56", "#3DFFE5", "#FF7CEB", "#00E288",
                         "#F6FF00", "#8A84E2", "#E8E8E8", "#CC7D5D")
 names(palette_supergroup) <- c("Stramenopiles", "Opisthokonta", "Hacrobia", "Alveolata", "Archaeplastida",
                                "Rhizaria", "Excavata", "Amoebozoa", "Apusozoa")
-
-# Eukaryotic divisions
-# palette_division <- c("#75DAFF", "#276ED8", "#54B2FF", "#C9F7FF", "#1D4692",
-#                       "#FF2D56", "#D81159", "#FF8787", "#DD6E6E",
-#                       "#3DFFE5", "#0099AA", "#9BFFEB", "#31E2DF", "#9EE2E1",
-#                       "#FF7CEB", "#EA00C7", "#FF007B", "#CE00B6", "#FFDAF5",
-#                       "#00E288", "#00B26E", "#8BE271", "#D2FF91",
-#                       "#F6FF00", "#FFE100",
-#                       "#8A84E2", "#AFAFDC", "#6D26E1",
-#                       "#E8E8E8", "#B7B7B7", "#808080",
-#                       "#CC7D5D", "#9B6E5D")
-# names(palette_division) <- c("Ochrophyta", "Opalozoa", "Pseudofungi", "Sagenista", "Stramenopiles_X",  # Stramenopiles
-#                              "Metazoa", "Fungi", "Choanoflagellida", "Mesomycetozoa",  # Opisthokonta
-#                              "Cryptophyta", "Katablepharidophyta", "Centroheliozoa", "Haptophyta", "Telonemia",  # Hacrobia
-#                              "Dinoflagellata", "Ciliophora", "Apicomplexa", "Perkinsea", "Protalveolata_X",  # Alveolata
-#                              "Chlorophyta", "Streptophyta", "Rhodophyta", "Glaucophyta",  # Archaeplastida
-#                              "Cercozoa", "Foraminifera",  # Rhizaria
-#                              "Discoba", "Metamonada", "Malawimonadidae",  # Excavata
-#                              "Lobosa", "Conosa", "Breviatea",  # Excavata
-#                              "Hilomonadea", "Apusomonadidae")  # Apusozoa
 
 # Eukaryotic subdivisions
 palette_subdivision <- c("#75DAFF",
