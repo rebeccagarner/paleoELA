@@ -1,9 +1,4 @@
 # Generalized Additive Models of sediment assemblages
-# https://r.qcbs.ca/workshops/r-workshop-08/
-
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-setwd("~/Library/CloudStorage/Dropbox-Personal/projects/ela18s/")
 
 # Load GAM functions
 source("scripts/21-gam_functions_seddna.R")
@@ -21,30 +16,6 @@ source("scripts/11-ela_monitoring.R")
 #### Import and format data ####
 # Import PCA axes 1 and 2 data
 pca <- read_tsv("output/ordinations/ela18s_pca_axes.tsv", col_names = TRUE)
-
-
-#### Compute Generalized Additive Models (GAMs) ####
-# # Plot relationships between response and explanatory variables
-# (var_scatterplot_l226n_pc1_phototrophs <- plotVars("L226N", pca %>%
-#                                                       filter(dataset == "Phototroph ASVs"), "PC1"))
-# (var_scatterplot_l226s_pc1_phototrophs <- plotVars("L226S", pca %>%
-#                                                       filter(dataset == "Phototroph ASVs"), "PC1"))
-# (var_scatterplot_l227_pc1_phototrophs <- plotVars("L227", pca %>%
-#                                                      filter(dataset == "Phototroph ASVs"), "PC1"))
-# (var_scatterplot_l224_pc1_phototrophs <- plotVars("L224", pca %>%
-#                                                      filter(dataset == "Phototroph ASVs"), "PC1"))
-# (var_scatterplot_l373_pc1_phototrophs <- plotVars("L373", pca %>%
-#                                                      filter(dataset == "Phototroph ASVs"), "PC1"))
-# 
-# (var_scatterplot_pc1_phototrophs_all <- var_scatterplot_l226n_pc1_phototrophs /
-#     var_scatterplot_l226s_pc1_phototrophs /
-#     var_scatterplot_l227_pc1_phototrophs /
-#     var_scatterplot_l224_pc1_phototrophs /
-#     var_scatterplot_l373_pc1_phototrophs)
-# #ggsave("figures/ela18s_pc1_phototrophs_vars.pdf", var_scatterplot_pc1_phototrophs_all, width = 8, height = 36, units = "in", device = cairo_pdf)
-
-# Clear up environment
-rm(list = ls(pattern = "^var_scatterplot_"))
 
 
 #### Fit GAMs based on nutrients, climate, and nutrients + climate ####
