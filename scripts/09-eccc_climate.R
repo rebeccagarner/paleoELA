@@ -1,9 +1,6 @@
 # Environment Canada weather station climate data
 # Data accessed from: https://climate.weather.gc.ca/historical_data/search_historic_data_e.html
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-
 # Load libraries
 library(janitor)
 library(ggforce)
