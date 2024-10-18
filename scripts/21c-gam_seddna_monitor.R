@@ -1,9 +1,4 @@
 # Generalized Additive Models of sediment assemblages within phytoplankton monitoring periods
-# https://r.qcbs.ca/workshops/r-workshop-08/
-
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-setwd("~/Library/CloudStorage/Dropbox-Personal/projects/ela18s/")
 
 # Load GAM functions
 source("scripts/21-gam_functions_seddna.R")
