@@ -1,9 +1,5 @@
 # Phytoplankton taxonomic diversity and biomass
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-setwd("~/Library/CloudStorage/Dropbox-Personal/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 library(ggforce)
