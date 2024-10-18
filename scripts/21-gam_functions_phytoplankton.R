@@ -1,8 +1,4 @@
 # Functions to compute Generalized Additive Models
-# https://r.qcbs.ca/workshops/r-workshop-08/
-
-# setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-# setwd("~/Dropbox/projects/ela18s/")
 
 # Load libraries
 library(tidyverse)
