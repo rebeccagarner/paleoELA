@@ -1,8 +1,5 @@
 # ELA phytoplankton biomass data
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 library(lubridate)
@@ -144,7 +141,7 @@ plotTimeSeries <- function(melt) {
 # ggsave("figures/ela_phytoplankton_biomass_timeseries_l226s.pdf", phytoplankton_timeseries_l226s, width = 16, height = 8, units = "in", device = cairo_pdf)
 # ggsave("figures/ela_phytoplankton_biomass_timeseries_l227.pdf", phytoplankton_timeseries_l227, width = 16, height = 8, units = "in", device = cairo_pdf)
 # ggsave("figures/ela_phytoplankton_biomass_timeseries_l373.pdf", phytoplankton_timeseries_l373, width = 16, height = 8, units = "in", device = cairo_pdf)
-# 
+
 
 #### Calculate time-weighted means for phytoplankton biomass ####
 # Summarize data by month for water column strata (based on summarizeByMonthWC)
