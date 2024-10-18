@@ -1,24 +1,21 @@
 # Clean PR2 v. 5.0.0 taxonomy
 
-setwd("C:/Users/Gandalf/Downloads/")
-setwd("~/Desktop/trophic_function/")
-
 # Load libraries
 library(tidyverse)
 
 
 #### Import and format data ####
 # Import and format PR2 v. 5.0.0 fasta sequence headers
-# pr2 <- read_delim("pr2_version_5.0.0_SSU_dada2_taxonomy.txt",
-#                  col_names = c("domain", "supergroup", "division", "subdivision", "class", "order", "family", "genus", "species")) %>%
-#   mutate(domain = str_remove(domain, "^>")) %>%
-#   select(domain, supergroup, division, subdivision, class, order, family, genus, species) %>%
-#   arrange(domain, supergroup, division, subdivision, class, order, family, genus, species) %>%
-#   filter(grepl("^Eukaryota", domain))
+pr2 <- read_delim("pr2_version_5.0.0_SSU_dada2_taxonomy.txt",
+                 col_names = c("domain", "supergroup", "division", "subdivision", "class", "order", "family", "genus", "species")) %>%
+  mutate(domain = str_remove(domain, "^>")) %>%
+  select(domain, supergroup, division, subdivision, class, order, family, genus, species) %>%
+  arrange(domain, supergroup, division, subdivision, class, order, family, genus, species) %>%
+  filter(grepl("^Eukaryota", domain))
 
 # Write cleaned headers to file
-# pr2 %>%
-#   write_csv("pr2_version_5.0.0_SSU_dada2_taxonomy.csv", col_names = TRUE)
+pr2 %>%
+  write_csv("pr2_version_5.0.0_SSU_dada2_taxonomy.csv", col_names = TRUE)
 
 # Import and format cleaned headers
 pr2_clean <- read_csv("pr2_version_5.0.0_SSU_dada2_taxonomy.csv", col_names = TRUE)
