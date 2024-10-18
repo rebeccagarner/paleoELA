@@ -1,9 +1,5 @@
 # Visualize nutrient and climate monitoring
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-setwd("~/Library/CloudStorage/Dropbox-Personal/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 library(lubridate)
@@ -64,79 +60,6 @@ nutrients <- env_byyear_all %>%
    theme(axis.text = element_text(colour = "black"),
          axis.title.x = element_blank(),
          panel.grid = element_blank()))
-
-# Plot nutrient (TP and TN) time series in each lake
-# (tp_plot <- nutrients %>%
-#     mutate(year_floor = ymd(paste0(year, "-01-01"))) %>%
-#     ggplot() +
-#     facet_col(lake_id~., scales = "free_y", space = "free", strip.position = "top") +
-#     geom_rect(aes(xmin = start_date, xmax = end_date,
-#                   ymin = -Inf, ymax = Inf,
-#                   fill = event),
-#               data = ela_manipulations,
-#               alpha = 0.5) +
-#     scale_fill_manual(values = palette_manipulation) +
-#     new_scale_fill() +
-#     geom_line(aes(x = year_floor, y = epilimnion_tp),
-#               colour = "green") +
-#     geom_point(aes(x = year_floor, y = epilimnion_tp,
-#                    fill = epilimnion_tp),
-#                colour = "black", size = 2.6, pch = 21, stroke = 0.1) +
-#     scale_x_date(date_breaks = "1 year", date_labels = "%y",
-#                  expand = c(0,0)) +
-#     scale_y_continuous(breaks = seq(0, 1000, 10)) +
-#     scale_fill_distiller(palette = "Greens",
-#                            direction = 1,
-#                            trans = "log10",
-#                            limits = c(min(nutrients$epilimnion_tp), max(nutrients$epilimnion_tp)),
-#                            labels = comma,
-#                            name = "TP (\u00b5g/L)") +
-#     labs(y = "TP ((\u00b5g/L)",
-#          colour = "Stratum",
-#          fill = "Experiment") +
-#     expand_limits(y = 0) +
-#     theme_bw() %+replace%
-#     theme(axis.text = element_text(colour = "black"),
-#           axis.title.x = element_blank(),
-#           strip.background = element_blank(),
-#           strip.text = element_text(colour = "black"),
-#           panel.grid = element_blank()))
-
-# (tn_plot <- nutrients %>%
-#     mutate(year_floor = ymd(paste0(year, "-01-01"))) %>%
-#     ggplot() +
-#     facet_col(lake_id~., scales = "free_y", space = "free", strip.position = "top") +
-#     geom_rect(aes(xmin = start_date, xmax = end_date,
-#                   ymin = -Inf, ymax = Inf,
-#                   fill = event),
-#               data = ela_manipulations,
-#               alpha = 0.5) +
-#     scale_fill_manual(values = palette_manipulation) +
-#     new_scale_fill() +
-#     geom_line(aes(x = year_floor, y = epilimnion_tn),
-#               colour = "orange") +
-#     geom_point(aes(x = year_floor, y = epilimnion_tn,
-#                    fill = epilimnion_tn),
-#                colour = "black", size = 2.6, pch = 21, stroke = 0.1) +
-#     scale_x_date(date_breaks = "1 year", date_labels = "%y",
-#                  expand = c(0,0)) +
-#     scale_y_continuous(breaks = seq(0, 1000, 0.2)) +
-#     scale_fill_distiller(palette = "Oranges",
-#                          direction = 1,
-#                          trans = "sqrt",
-#                          limits = c(min(nutrients$epilimnion_tn), max(nutrients$epilimnion_tn)),
-#                          #breaks = c(0, 1, 2),
-#                          name = "TN (mg/L)") +
-#     labs(y = "TN (mg/L)",
-#          colour = "Stratum",
-#          fill = "Experiment") +
-#     expand_limits(y = 0) +
-#     theme_bw() %+replace%
-#     theme(axis.text = element_text(colour = "black"),
-#           axis.title.x = element_blank(),
-#           strip.background = element_blank(),
-#           strip.text = element_text(colour = "black"),
-#           panel.grid = element_blank()))
 
 # Plot TP and TN with two axes
 max(nutrients$epilimnion_tp)/max(nutrients$epilimnion_tn)
