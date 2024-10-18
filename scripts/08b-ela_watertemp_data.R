@@ -1,8 +1,5 @@
 # ELA water temperature data
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-
 # Load libraries
 library(ggforce)
 library(scales)
