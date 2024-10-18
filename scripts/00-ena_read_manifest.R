@@ -1,8 +1,5 @@
 # ENA read manifest files
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 
