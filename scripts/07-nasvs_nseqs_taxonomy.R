@@ -1,8 +1,5 @@
 # Taxonomic composition
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 library(patchwork)
@@ -14,36 +11,7 @@ source("scripts/00-palettes.R")
 source("scripts/03e-sediment_data.R")
 
 
-# #### Import and format data ####
-# # Import melted ASV table
-# asv_melt <- read_tsv("output/melted/ela18s_microeuks_melt.tsv", col_names = TRUE,
-#                      col_types = cols(date = col_date()))
-# 
-# # Import sediment dating data
-# dating <- read_tsv("output/environmental/ela_gravitycore_dating.tsv", col_names = TRUE) %>%
-#   dplyr::select(-lakepulse_id)
-# 
-# 
-# #### Format data ####
-# # Format metadata
-# metadata <- asv_melt %>%
-#   distinct(sample_id, sample_type, lake_id, date, depth_unit, upperpt, lowerpt, midpt)
-# 
-# # Format taxonomy
-# taxonomy <- asv_melt %>%
-#   distinct(asv_code, sequence, domain, supergroup, division, subdivision, class, order, family, genus, species)
-# 
-# 
-# #### Assess taxonomic group ASV/sequence compositions ####
-# # Filter sediment samples and join dating data
-# sediment_melt <- asv_melt %>%
-#   filter(sample_type == "sediment") %>%
-#   left_join(dating, by = c("lake_id", "midpt"))
-# 
-# length(unique(sediment_melt$asv_code))  # Number of ASVs in data set
-# sum(sediment_melt$nseqs)  # Number of sequences in data set
-# length(unique(sediment_melt$sample_id))  # Number of samples in data set
-
+#### Assess taxonomic group ASV/sequence compositions ####
 # Calculate total n sequences per sample
 sediment_nseqs <- sediment_melt %>%
   group_by(sample_id) %>%
@@ -86,10 +54,6 @@ nasvs_nseqs_subdivision <- nasvs_subdivision %>%
                  y = pct,
                  fill = subdivision),
              stat = "identity") +
-    # geom_text(aes(x = factor(supergroup, levels = c("Stramenopiles", "Opisthokonta", "Hacrobia", "Alveolata", "Archaeplastida",
-    #                                                 "Rhizaria", "Excavata", "Amoebozoa", "Apusozoa")),
-    #               y = pct,
-    #               label = n)) +
     geom_hline(yintercept = 0, linetype = "dashed") +
     scale_fill_manual(values = palette_subdivision, na.value = "black") +
     scale_y_continuous(labels = abs) +
