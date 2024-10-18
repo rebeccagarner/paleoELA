@@ -1,6 +1,0 @@
-# R script for changing raw fastq file names
-rm(list = ls())
-(myfiles <- list.files(pattern = "fastq.gz"))
-gsub(".*ELA", "ELA", myfiles)
-file.rename(from = myfiles, to = gsub(".*ELA", "ELA", myfiles))
-list.files()
