@@ -1,8 +1,5 @@
 # Track reads through ASV table creation pipeline
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 
