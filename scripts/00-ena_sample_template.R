@@ -1,7 +1,4 @@
-# ENA sample submission template (GF/C filters)
-
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
+# ENA sample submission template
 
 # Load libraries
 library(tidyverse)
