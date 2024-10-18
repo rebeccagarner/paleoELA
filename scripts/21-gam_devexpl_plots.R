@@ -1,9 +1,5 @@
 # Generalized Additive Model plots
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-setwd("~/Library/CloudStorage/Dropbox-Personal/projects/ela18s/")
-
 # Load GAM functions
 source("scripts/21-gam_functions_phytoplankton.R")
 
