@@ -1,8 +1,4 @@
 # Format ELA phytoplankton monitoring data
-# Contact person for ELA phytoplankton data: Scott Higgins (shiggins@iisd-ela.org)
-
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
 
 # Load libraries
 library(tidyverse)
