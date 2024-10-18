@@ -1,8 +1,5 @@
 # Taxonomy curation
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 library(seqinr)
@@ -103,27 +100,8 @@ microeuks_seqs <- microeuks_melt %>%
 #             names = microeuks_seqs$asv_code,
 #             file.out = "output/fasta/ela18s_microeuks.fasta")
 
-# # Import tree
-# tree_microeuks <- read.tree("output/trees/ela18s_microeuks_gtr.tree")
-# 
-# # Join tree and taxonomy
-# ggtree_microeuks <- ggtree(tree_microeuks, layout = "rectangular", size = 0.05)
-# 
-# ggtree_microeuks$data <- ggtree_microeuks$data %>%
-#   left_join(taxonomy, by = c("label" = "asv_code"))
-# 
-# # Visualize tree with taxonomy labels
-# (tree_taxonomy_microeuks <- ggtree_microeuks +
-#     geom_tippoint(data = ggtree_microeuks$data,
-#                   aes(colour = division), size = 0.5) +
-#     geom_tiplab(data = ggtree_microeuks$data,
-#                 aes(label = paste(supergroup, division, class, order, family, genus, sep = "|")), size = 0.2) +
-#     scale_colour_manual(values = palette_division, na.value = "black") +
-#     theme(legend.position = "none"))
-# #ggsave("figures/ela18s_microeuks_gtr.pdf", tree_taxonomy_microeuks, width = 12, height = 100, units = "in", limitsize = FALSE)
 
-
-#### Tax group ASV/sequence compositions (pie charts) ####
+#### Taxonomic group ASV/sequence compositions (pie charts) ####
 # Pie chart n ASVs assigned to metazoa/fungi/plants/other
 (taxgroup_asvs_piechart <- asv_melt %>%
    select(-sample_id, -nseqs) %>%
