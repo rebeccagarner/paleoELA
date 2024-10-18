@@ -1,9 +1,5 @@
 # Map lakes
 
-setwd("C:/Users/Gandalf/Dropbox/projects/ela18s/")
-setwd("~/Dropbox/projects/ela18s/")
-setwd("~/Library/CloudStorage/Dropbox-Personal/projects/ela18s/")
-
 # Load libraries
 library(tidyverse)
 library(lubridate)
@@ -182,22 +178,3 @@ land_lambert <- st_transform(land, crs = 3348)
 # Combine maps
 (maps_all <- region_map / lakes_map)
 #ggsave("figures/ela_lakes_map.pdf", maps_all, width = 5, height = 7, units = "in", device = cairo_pdf)
-
-
-#### Old code ####
-# (region_map <- ggplot() +
-#     geom_sf(data = provinces,
-#             fill = "#F7F7F7", colour = "#d1cfcf", linewidth = 0.1) +
-#     geom_sf(data = land_lambert %>%
-#               filter(ID == "USA"),
-#             fill = "#F7F7F7", colour = NA) +
-#     geom_sf(data = canada_hydro,
-#             fill = "#ACE8FF", colour = NA) +
-#     geom_sf(data = ela_coords, colour = "black", size = 3, shape = 15) +
-#     coord_sf(xlim = c(5500000, 7200000), ylim = c(1200000, 2400000),
-#              expand = FALSE) +
-#     theme(axis.text = element_text(colour = "black"),
-#           axis.ticks = element_line(colour = "black"),
-#           panel.grid = element_line(colour = "white"),
-#           panel.background = element_rect(fill = "#94ECDA"),
-#           panel.border = element_rect(colour = "black", fill = NA)))
