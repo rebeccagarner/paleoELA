@@ -1,4 +1,5 @@
-# paleoELA
+# paleoELA <a><img src='images/l226_crystallize.png' align="right" height="300"/></a>
+
 Scripts associated with the manuscript
 
 ---
