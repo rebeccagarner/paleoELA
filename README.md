@@ -1,10 +1,12 @@
-# paleoELA <a><img src='images/l226_crystallize.png' align="right" height="300"/></a>
+# Eutrophication and Warming Drive Algal Community Shifts in Synchronised Time Series of Experimental Lakes
 
-Scripts associated with the manuscript
+<p align="center"><img src='images/graphical_abstract.png' align="center" height="300"></p>
+
+Scripts associated with the article
 
 ---
 
-Garner RE, Taranu ZE, Higgins SN, Paterson MJ, Gregory-Eaves I, Walsh DA. Eutrophication and warming drive algal community shifts in synchronized time series of experimental lakes.
+Garner RE, Taranu ZE, Higgins SN, Paterson MJ, Gregory-Eaves I, Walsh DA. 2025. Eutrophication and Warming Drive Algal Community Shifts in Synchronised Time Series of Experimental Lakes. *Environmental Microbiology* **27**, e70159. https://doi.org/10.1111/1462-2920.70159.
 
  ---
 
@@ -42,7 +44,7 @@ Garner RE, Taranu ZE, Higgins SN, Paterson MJ, Gregory-Eaves I, Walsh DA. Eutrop
 - **10-ela_phytoplankton_species.R** Summarize ELA algal species cell count, density, and biomass data.
 - **11-ela_monitoring.R** Consolidate ELA monitoring data.
 - **12-pca_phytoplankton.R** Perform principal component analyses on monitoring assemblages.
-- **18-rv.R** Calculat RV multivariate correlations between monitoring and sediment assemblages.
+- **18-rv.R** Calculate RV multivariate correlations between monitoring and sediment assemblages.
 - **21-gam_devexpl_plots.R** Plot generalized additive model (GAM) results.
 - **21-gam_functions_phytoplankton.R** Define functions to compute GAMs on monitoring assemblages.
 - **21-gam_functions_seddna.R** Define functions to compute GAMs on sediment assemblages.
